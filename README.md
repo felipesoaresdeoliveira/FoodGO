@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# FoodGO
 
-## Getting Started
+FoodGO é um aplicativo para pedidos de comida, permitindo que os clientes escolham entre consumir no local ou levar para viagem. Este projeto foi desenvolvido como estudo de desenvolvimento web, utilizando **Next.js** e outras tecnologias modernas.
 
-First, run the development server:
+## Tecnologias Utilizadas
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Next.js** - Framework React para aplicações web modernas
+- **TypeScript** - Tipagem estática para um código mais seguro
+- **Tailwind CSS** - Estilização eficiente e flexível
+- **Prisma** - ORM para integração com banco de dados
+- **Node.js** - Ambiente de execução para o backend
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Como Executar o Projeto
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Para rodar o projeto localmente, siga os passos abaixo:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/foodGO.git
+   cd foodGO
+   ```
 
-## Learn More
+2. Instale as dependências:
+   ```bash
+   npm install
+   # ou
+   yarn install
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+3. Execute o servidor de desenvolvimento:
+   ```bash
+   npm run dev
+   # ou
+   yarn dev
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4. Acesse o aplicativo em [http://localhost:3000](http://localhost:3000)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Funcionalidades Planejadas
 
-## Deploy on Vercel
+- 📍 Escolha entre consumir no local ou levar para viagem
+- 🛒 Carrinho de compras intuitivo
+- 🔍 Pesquisa e filtragem de produtos
+- 💳 Integração com métodos de pagamento
+- 📊 Dashboard para restaurantes gerenciarem pedidos
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Aprendizados e Objetivo
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Este projeto serve como estudo para aprimorar habilidades em **Next.js**, **Prisma** e desenvolvimento de aplicações web modernas. No futuro, ele poderá ser expandido e possivelmente comercializado.
+
+## Contribuição
+
+Se quiser contribuir com melhorias ou sugestões, sinta-se à vontade para abrir uma issue ou enviar um pull request!
+
+---
+
+*Este projeto é um estudo e não está disponível no momento para uso comercial.*
+*Desenvolvido por Felipe Soares*
