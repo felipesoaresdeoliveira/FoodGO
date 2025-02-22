@@ -18,7 +18,7 @@ model restaurant {
   name           String
   slug           String
   description    String
-  AvatarImgUrl   String
+  AvatarImageUrl   String
   coverImgUrl    String
   order          order[]
   menuCategories menuCategory[]
@@ -31,7 +31,7 @@ model menuCategory {
   id           String     @id @default(uuid())
   name         String
   restaurantId String
-  restaurant   restaurant @relation(fields: [restaurantId], references: [id])
+  restaurant   restaurant @relation(fields: [restaurantId], references: [id], onDelete: Cascade)
   products     products[]
   createdAt    DateTime   @default(now())
   updatedAt    DateTime   @updatedAt
@@ -43,12 +43,12 @@ model products {
   price          Float
   description    String
   imageUrl       String
-  ingredients    String
+  ingredients    String[]
   menuCategoryId String
   restaurantId   String
   orderProducts  orderProducts[]
-  restaurant     restaurant      @relation(fields: [restaurantId], references: [id])
-  menuCategory   menuCategory    @relation(fields: [menuCategoryId], references: [id])
+  restaurant     restaurant      @relation(fields: [restaurantId], references: [id], onDelete: Cascade)
+  menuCategory   menuCategory    @relation(fields: [menuCategoryId], references: [id], onDelete: Cascade)
   createdAt      DateTime        @default(now())
   updatedAt      DateTime        @updatedAt
 }
@@ -59,7 +59,7 @@ model order {
   status            orderStatus
   consumptionMethod consumptionMethod
   restaurantId      String
-  restaurant        restaurant        @relation(fields: [restaurantId], references: [id])
+  restaurant        restaurant        @relation(fields: [restaurantId], references: [id], onDelete: Cascade)
   orderProducts     orderProducts[]
   createdAt         DateTime          @default(now())
   updatedAt         DateTime          @updatedAt
@@ -71,8 +71,8 @@ model orderProducts {
   productId String
   quantity  Int
   price     Float
-  order     order    @relation(fields: [orderId], references: [id])
-  product   products @relation(fields: [productId], references: [id])
+  order     order    @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  product   products @relation(fields: [productId], references: [id], onDelete: Cascade)
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
